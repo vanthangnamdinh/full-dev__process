@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#000000"/>
+    <meta
+            name="description"
+            content="Web site created using create-react-app"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>React App</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+<!--    <noscript>You need to enable JavaScript titlo run this app.</noscript>-->
+<div id="rot">
+    <div class="left-tab-bar ">
+        <div class="home border-b">
+            <h2 class="fake-icon">BCloud</h2>
+            <h2 class="fake-icon note home-open">Ghi chú</h2>
+            <div class="chevron-down home-open">
+                <img src="img/chevron-down.svg">
+            </div>
+        </div>
+        <div class="left-menu">
+            <div class="menu">
+                <ul>
+                    <li >
+                        <div class="menu-tabs all-icloud" id="all" onclick="handleClickMenutab()">
+                            <div class="folder-icon">
+                                <img src="img/folder.svg" alt="">
+                            </div>
+                            <div class="tab border-s">
+                                Tất cả iCloud
+                            </div>
+                            <div class="search-space">
+                                <div class="search-input ">
+                                    <div class="search-icon">
+                                        <img src="img/search-icon.svg">
+                                    </div>
+                                    <div class="search-text">
+                                        <input type="text" class="input" placeholder="Tìm kiếm tất cả ghi chú" onchange="find_note()">
+                                    </div>
+                                </div>
+                                <div class="search-menu">
+                                    <ul class="s-menu">
+                                        <li>
+                                            <div class="search-menu-tabs ">
+                                                <div class="border-search">
+                                                    <div class="title-note">Ghi chú</div>
+                                                    <div class="t-body">
+                                                        <div class="time-note">7 note</div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="search-menu-tabs ">
+                                                <div class="border-search">
+                                                    <div class="title-note">Hoạt động</div>
+                                                    <div class="t-body">
+                                                        <div class="time-note">8 act</div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="search-menu-tabs ">
+                                                <div class="border-search">
+                                                    <div class="title-note">Tin nhắn</div>
+                                                    <div class="t-body">
+                                                        <div class="time-note">10 mess</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class=" all-notes menu-tabs ">
+                            <div class="folder-icon">
+                                <img src="img/folder.svg">
+                            </div>
+                            <div class="tab border-s">
+                                Ghi chú
+                            </div>
+                            <div class="search-space">
+                                <div class="search-input ">
+                                    <div class="search-icon">
+                                        <img src="img/search-icon.svg">
+                                    </div>
+                                    <div class="search-text">
+                                        <input type="text" id="inputValue" class="input" placeholder="Tìm kiếm tất cả ghi chú" onchange="find_note()">
+                                    </div>
+                                </div>
+                                <div class="search-menu">
+                                    <ul class="s-menu">
+                                        <li id="note-1" onclick="handleMouseClick(1)">
+                                            <div class="search-menu-tabs ">
+                                                <div class="border-search">
+                                                    <div class="title-note">Đây là tiêu đề của note 1 dòng</div>
+                                                        <div class="t-body">
+                                                            <div class="time-note">20/07/2022</div>
+                                                            <div class="note-body"></div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </li>   
+                                        <li id="note-2" onclick="handleMouseClick(2)">
+                                            <div class="search-menu-tabs ">
+                                                <div class="border-search">
+                                                    <div class="title-note">Giao diện note</div>
+                                                    <div class="t-body">
+                                                        <div class="time-note">17/06/2022</div>
+                                                        <div class="note-body">Đây là giao dien web</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li id="note-3" onclick="handleMouseClick(3)">
+                                            <div class="search-menu-tabs ">
+                                                <div class="border-search">
+                                                    <div class="title-note">Nhiệm vụ tháng</div>
+                                                    <div class="t-body">
+                                                        <div class="time-note">3 phút trước</div>
+                                                        <div class="note-body">Giao dien note la 1 cai gi do rat dep</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li id="note-4" onclick="handleMouseClick(4)">
+                                            <div class="search-menu-tabs ">
+                                                <div class="border-search">
+                                                    <div class="title-note">PostgresSql</div>
+                                                    <div class="t-body">
+                                                        <div class="time-note">5 phút trước</div>
+                                                        <div class="note-body">Cơ sở dữ liệ nà thứ rất quan trọng</div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li id="note-5" onclick="handleMouseClick(5)">
+                                            <div class="search-menu-tabs  ">
+                                                <div class="border-search last-tab">
+                                                    <div class="title-note">Test</div>
+                                                    <div class="t-body">
+                                                        <div class="time-note">7 phút trước</div>
+                                                        <div class="note-body">Sẽ có buổi test quan trọng vào tuần tới</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-tabs last-tab all-del">
+                            <div class="folder-icon">
+                                <img src="img/folder.svg" alt="">
+                            </div>
+                            <div class=" tab border-s last-menu-tab">
+                                Đã xoá gần đây
+                            </div>
+                            <div class="search-space">
+                                <div class="search-input ">
+                                    <div class="search-icon">
+                                        <img src="img/search-icon.svg">
+                                    </div>
+                                    <div class="search-text">
+                                        <input type="text" class="input" placeholder="Tìm kiếm tất cả ghi chú">
+                                    </div>
+                                </div>
+                                <div class="del-menu" >
+                                    <div class="noti">Trống</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="note-action">
+        <div class="tool-menu border-b">
+            <div class="left-tool-menu">
+                    <div class="left-icon">
+                       <img src="img/pencil-square.svg">
+                    </div>
+                    <div class="left-icon">
+                        <img src="img/table.svg" >
+                    </div>
+                    <div class="left-icon">
+                            <img src="img/check-circle.svg">
+                        </div>
+                    <div class="left-icon type-text">
+                           <img src="img/type.svg">
+                    </div>
+            </div>
+            <div class="right-tool-menu">
+                <div class="right-icon">
+                    <div class="right-icon">
+                       <img src="img/person-plus.svg">
+                    </div>
+                    <div class="right-icon">
+                       <img src="img/bi-trash3.svg">
+                    </div>
+                    <div class="space"></div>
+                    <div class="account">
+                        <div class="account-name">
+                            Name
+                        </div>
+                        <div class="chevron-down account-down">
+                            <img src="img/chevron-down.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="text-note">
+            <textarea id="text" class="text-area" placeholder="Viết ghi chú tại đây"></textarea>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+table,th,td{
+    border:1px solid black;
+}
+#root{
+    padding: 100px 0 0 100px;
+}
+table{
+    width: 600px;
+}
+caption{
+    font-size: 40px;
+}
+.box{
+    width: 15px;
+}

@@ -1,0 +1,533 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue','Times New Roman',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+#rot{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: azure;
+    display: flex;
+}
+h1,h2,h3,h4{
+    margin: 0;
+}
+li{
+    list-style-type: none;
+}
+.left-tab-bar{
+    padding-left: 0;
+    width: 250px;
+    height: 100%;
+    display: block;
+    float: left;
+    border-right: hsla(0,0%,83.1%,.6) solid 1px;
+}
+.left-tab-bar .home{
+    position: fixed;
+    background-color: azure;
+    display: inline-block;
+    border-right: hsla(0,0%,83.1%,.6) solid 1px;
+    width: 250px;
+    height: 40px;
+}
+.left-tab-bar{
+    pointer-events: none;
+}
+.home .home-open:hover{
+    cursor: pointer;
+}
+.border-b{
+    border-bottom: hsla(0,0%,83.1%,.6) solid 1px;
+}
+.fake-icon{
+    padding-left: 10px;
+    margin: 0;
+    font-size: 150%;
+    padding-top: 5px;
+    display: inline-block;
+}
+.chevron-down{
+    position: fixed;
+    display: inline-block;
+    padding: 5px 0 0 3px;
+    color: coral;
+}
+.home .note{
+    color: coral;
+    padding-left: 0;
+}
+.left-menu{
+    display: inherit;
+    padding-top: 40px;
+    background-color: azure;
+}
+.left-menu ul{
+    padding: 0;
+}
+.menu .menu-tabs:hover{
+    background-color: rgba(242,206,0,.24);
+    cursor: pointer;
+    border-bottom: hsla(0,0%,83.1%,.6) solid 1px;
+    padding-top: -1px;
+}
+.menu-tabs:hover .tab~.menu-tabs>.tab{
+    border: none;
+}
+
+.menu-tabs:focus{
+    background-color: rgba(242,206,0,.42);
+}
+.menu-tabs{
+    display: block;
+    pointer-events: auto;
+    position: relative;
+    height: 50px;
+    font-size: 120%;
+}
+.folder-icon{
+    display: inline-block;
+    padding: 10px 5px 0 10px;
+    color: coral;
+    height: 100%;
+}
+.tab{
+    display: inline-block;
+    height: 40px;
+    width: 84%;
+    border-bottom: hsla(0,0%,83.1%,.6) solid 1px;
+    margin-bottom: 15px;
+}
+.search-space{
+    position: fixed ;
+    width: 300px;
+    height: 100%;
+    display: inline-block;
+    border-right: hsla(0,0%,83.1%,.6) solid 1px;
+    top:0;
+}
+.search-input .search-icon{
+    position: relative;
+    color: darkgray;
+}
+.search-input{
+    width: 300px;
+    border-right: hsla(0,0%,83.1%,.6) solid 1px;
+    border-left: hsla(0,0%,83.1%,.6) solid 1px;
+    margin: 0;
+    background-color: azure;
+    height: 40px;
+    position: fixed;
+    border-bottom: hsla(0,0%,83.1%,.6) solid 1px;
+}
+.input{
+    border: none;
+    height: 30px;
+    padding: 5px 0 0 0 ;
+    outline: none;
+    background-color: azure;
+}
+.search-input .search-icon{
+    display: inline-block;
+    position:relative;
+    height: 40px;
+    padding: 2px 0 15px 10px;
+}
+.search-input .search-text{
+    font-size: 16px;
+    color: darkgray;
+    display: inline-block;
+    padding-left: 15px;
+    align-items: unset;
+    background-color: azure;
+    position: absolute;
+}
+.search-menu{
+    display: inherit;
+    width: 100%;
+    padding-top:40px;
+    padding-left: 0;
+    background-color: azure;
+}
+.s-menu{
+    padding: 0;
+    font-family: Arial, serif;
+    width: 100%;
+}
+.border-s{
+    display: inline-block;
+    position: inherit;
+}
+.border-search{
+    position: inherit;
+    height: 100%;
+    border-bottom: hsla(0,0%,83.1%,.6) solid 1px;
+}
+.search-menu-tabs{
+    height: 70px;
+    padding: 10px 0 0 25px;
+}
+.search-menu-tabs:hover{
+    background-color: rgba(242,206,0,.24);
+    cursor: pointer;
+    border-bottom: hsla(0,0%,83.1%,.6) solid 1px;
+}
+.search-menu-tabs:hover .border-search{
+    border: none;
+}
+.title-note{
+    font-weight: 550;
+    font-size: 18px;
+}
+.t-body{
+    height: 30px;
+    width: 100%;
+    position: relative;
+    display: block;
+}
+.time-note{
+    display: inline-block;
+    color: dimgray;
+    font-size: 15px;
+}
+.note-body{
+    position: absolute;
+    display: -webkit-box;
+    font-size: 15px;
+    height: auto;
+    width: 90%;
+    padding-left: 90px;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: darkgray;
+    text-overflow: ellipsis;
+    top: 4px;
+}
+.search-space{
+    display: none;
+}
+.del-menu{
+    background-color:azure;
+    height: 100%;
+    width: 100%;
+}
+.note-action{
+    display: block;
+    padding:0;
+    height: 100%;
+}
+.tool-menu{
+    position: fixed;
+    height: 40px;
+    width: 100%;
+    background-color: azure;
+}
+.left-tool-menu{
+    height: 40px;
+    display: inline-block;
+}
+.left-tool-menu>ul{
+    padding: 0;
+}
+.left-icon{
+    position: relative;
+    display: inline-block;
+    padding: 5px 0 0 10px;
+    color: coral;
+    cursor: pointer;
+}
+.right-tool-menu{
+    position: fixed;
+    right: 0;
+    display: inline-block;
+    height: 40px;
+    padding-right: 30px;
+}
+.right-tool-menu>ul{
+    padding: 0;
+    height: 100%;
+    align-items:center ;
+}
+.right-icon{
+    position: relative;
+    display: inline-block;
+    padding: 5px 0 0 10px;
+    color: coral;
+    cursor: pointer;
+}
+.right-icon:hover{
+    cursor: pointer;
+}
+.account-icon{
+    height: 40px;
+}
+.space-between{
+    position: relative;
+    display: inline-block;
+    padding-top: 10px;
+}
+.space{
+    padding-top:0;
+    display: inline-block;
+    height: 15px;
+    width: 10px;
+    top: 20px ;
+}
+.space-right{
+    padding-top: 10px;
+}
+.account{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.account-name{
+    position: inherit;
+    display: inline-block;
+    font-size: medium;
+    color: coral;
+}
+.account-down{
+    display: inline-block;
+    align-items: center;
+    padding: 0;
+}
+.account-manager{
+    position: absolute;
+    width: 100px;
+    display: none;
+}
+.account-manager ul{
+    padding: 0;
+    display: block;
+}
+.account-manager ul li a,.account-manager ul li{
+    display: block !important;
+}
+.account:hover .account-manager{
+    display: block;
+    background-color: white;
+}
+.text-note{
+    position: relative;
+    padding-top: 40px ;
+    height: 100%;
+}
+.text-note .text-area{
+    position: fixed;
+    border: none;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    background-color: azure;
+    padding: 10px 0 0 20px;
+}
+.all-notes{
+    pointer-events: auto;
+}
+.all-notes:hover .search-space,.all-icloud:hover .search-space,.all-del:hover .search-space{
+    display: block;
+    left: 250px;
+    z-index: 2;
+}
+.all-notes:hover .search-space,.all-icloud:hover .search-space,.all-del:hover .search-space{
+    border-left: hsla(0,0%,83.1%,.6) solid 1px ;
+}
+.all-notes:hover .search-input,.all-icloud:hover .search-input,.all-del:hover .search-input{
+    width: 299px;
+}
+.left-tab-bar:hover{
+    width: 550px;
+}
+.noti{
+    padding:100px 0 0 120px;
+    color: darkgray;
+}
+@media only screen and (max-width: 850px) {
+    #rot{
+        width: 100%;
+        height: 100%;
+    }
+    .left-menu ,.search-space{
+        display: none;
+    }
+    .search-space{
+        all: unset;
+    }
+    .left-tab-bar{
+        position: absolute;
+        height: 40px;
+        z-index: 2;
+    }
+    .left-tab-bar{
+        pointer-events: auto;
+    }
+    .left-tab-bar .home{
+        width: 250px;
+        display: block;
+        position: fixed;
+    }
+    .search-space{
+        display:none;
+    }
+    .del-menu{
+        width: 300px;
+        height: 250px;
+        background-color: cornsilk ;
+    }
+    .left-tab-bar:hover>.home{
+        border-bottom:hsla(0,0%,83.1%,.6) solid 1px ;
+    }
+    .left-tab-bar:hover .left-menu{
+        width: 250px;
+        display: block !important;
+        background-color: white;
+        border-right: hsla(0,0%,83.1%,.6) solid 1px;
+    }
+    .left-menu:hover{
+        border-right: none;
+    }
+    .search-space{
+        top:0;
+        left: 250px;
+        border: hsla(0,0%,83.1%,.6) solid 1px;
+        border-top: none;
+    }
+    .last-tab{
+        border-bottom: hsla(0,0%,83.1%,.6) solid 1px;
+    }
+    ul{
+        margin: 0;
+    }
+    .search-space .search-text{
+        background-color: white;
+    }
+    .search-input{
+        border: none;
+        border-bottom: hsla(0,0%,83.1%,.6) solid 1px;
+    }
+    .search-text,.input{
+        background-color: white;
+    }
+    .search-menu,.search-input{
+        background-color: white;
+        width: 300px;
+    }
+    .all-notes:hover .search-space,.all-icloud:hover .search-space,.all-del:hover .search-space{
+        display: block;
+        position: fixed;
+    }
+    .home .left-menu .menu ul li {
+        display: block;
+        background-color: white;
+    }
+    .title-note{
+        font-size: 17px;
+    }
+    .time-note{
+        font-size: 15px;
+    }
+    .note-body{
+        padding-left: 105px;
+    }
+    .all-notes:hover+.search-menu{
+        display: block;
+    }
+    .left-tab-bar>.home{
+        border-bottom: none;
+    }
+    .border-right{
+        border-right: hsla(0,0%,83.1%,.6) solid 1px;
+    }
+    .note-action{
+        top:40px;
+        padding: 0;
+        position: fixed;
+        height: 100%;
+    }
+    .last-tab{
+        border-bottom: none;
+    }
+    .tool-menu{
+        border-left: hsla(0,0%,83.1%,.6) solid 1px;
+        border-top: hsla(0,0%,83.1%,.6) solid 1px;
+    }
+    .text-note .text-area{
+        border-left: hsla(0,0%,83.1%,.6) solid 1px;
+    }
+}
+@media only screen and (max-width: 580px) {
+    .search-space{
+        all: unset;
+    }
+    .search-space{
+        display: none;
+    }
+    .left-tab-bar .home,.left-tab-bar{
+        width: 200px;
+    }
+    .tab{
+        width: 79.7%;
+    }
+    .menu-tabs{
+        border-right:hsla(0,0%,83.1%,.6) solid 1px ;
+    }
+    .all-notes:hover .search-menu{
+        display: block;
+    }
+    .left-tab-bar:hover .left-menu{
+        width: 200px;
+        display: block !important;
+        background-color: white;
+    }
+    .all-notes:hover .search-space,.all-icloud:hover .search-space,.all-del:hover .search-space{
+        display: block;
+        position: fixed;
+        left: 100px;
+    }
+    .note-action{
+        all:unset;
+    }
+    .left-tab-bar .home{
+        border-right: hsla(0,0%,83.1%,.6) solid 1px;
+    }
+    .note-action{
+        position: fixed;
+        display: block;
+        top: 40px;
+        height: 100%;
+        width: 100%;
+    }
+    .search-space{
+        top: 0;
+        left: 100px;
+        border: hsla(0,0%,83.1%,.6) solid 1px ;
+        border-top: none;
+        z-index: 2;
+    }
+    .search-input .search-icon{
+        position: absolute;
+        display: inline-block;
+    }
+    .search-space .search-input{
+        position: inherit;
+        display: inline-block;
+    }
+    .search-input .search-text{
+        text-align: inherit;
+        padding-left: 40px;
+    }
+    .left-icon{
+        cursor: pointer;
+    }
+}

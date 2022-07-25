@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sell</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="root">
+        <table class>
+            <caption><div>Bán Hàng</div></caption>
+            <tr>
+                <td class="box"><input type="checkbox"></td>
+                <td>Hàng Hoá</td>
+                <td>Đơn Giá</td>
+                <td>Số Lượng</td>
+                <td>Thành tiền</td>
+            </tr>
+            <tr>
+                <td class="box"><input id="iPhone9-check" type="checkbox" onclick="check('iPhone9')"></td>
+                <td>iPhone9</td>
+                <td>700</td>
+                <td><input id="iPhone9-num" type="number" value="0" onchange="changed('iPhone9')"></td>
+                <td><div id="iPhone9" style="display: none"></div></td>
+            </tr>
+            <tr>
+                <td class="box"><input id="Samsung-check" type="checkbox" onclick="check('Samsung')"></td>
+                <td>Samsung</td>
+                <td>400</td>
+                <td><input id="Samsung-num" type="number" value="0" onchange="changed('Samsung')"></td>
+                <td><div id="Samsung" style="display: none"></div></td>
+            </tr>
+            <tr>
+                <td class="box"><input id="Nokia-check" type="checkbox" onclick="check('Nokia')"></td>
+                <td>Nokia</td>
+                <td>100</td>
+                <td><input id="Nokia-num" type="number" value="0" onchange="changed('Nokia')"></td>
+                <td><div id="Nokia" style="display: none"></div></td>
+            </tr>
+            <tr>
+                <td class="box"><input id="Sony-check" type="checkbox" onclick="check('Sony')"></td>
+                <td>Sony Xperia</td>
+                <td>450</td>
+                <td><input id="Sony-num" type="number" value="0" onchange="changed('Sony')"></td>
+                <td><div id="Sony" style="display: none"></div></td>
+            </tr>
+            <tr>
+                <td class="box"><input id="Motorola-check" type="checkbox" onclick="check('Motorola')"></td>
+                <td>Motorola</td>
+                <td>180</td>
+                <td><input id="Motorola-num" type="number" value="0" onchange="changed('Motorola')"></td>
+                <td><div id="Motorola" style="display: none"></div></td>
+            </tr>
+            <tr>
+                <td class="box"> <input id="oppo-check" type="checkbox" onclick="check('oppo')"></td>
+                <td>oppo</td>
+                <td>600</td>
+                <td><input id="oppo-num" type="number" value="0" onchange="changed('oppo')"></td>
+                <td><div id="oppo" style="display: none"></div></td>
+            </tr>
+            <tr>
+                <td class="box"><input id="bPhone-check" type="checkbox" onclick="check('bPhone')"></td>
+                <td>bPhone</td>
+                <td>90</td>
+                <td><input id="bPhone-num" type="number" value="0" onchange="changed('bPhone')"></td>
+                <td><div id="bPhone" style="display: none"></div></td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center"><button onclick="checkSum()" style="width: 500px">Tổng</button></td>
+                <td ><div id="Sum"></div></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
